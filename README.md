@@ -21,4 +21,4 @@ A simple and modern To-Do List built with **React.js** and custom **CSS styling*
 
 ## 📸 Screenshot
 
-![screenshot](./screenshot.png)  
+![screenshot](screenshot.png)  
