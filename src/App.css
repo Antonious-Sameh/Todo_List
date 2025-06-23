@@ -1,0 +1,153 @@
+/* تصميم تودو ليست بحجم كبير جداً وشكل مودرن جامد 🔥 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  overflow: auto;
+}
+
+.App {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 50px;
+  border-radius: 30px;
+  max-width: 900px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ffeaa7;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input {
+  padding: 25px 30px;
+  font-size: 28px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px #ffeaa7;
+}
+
+button {
+  padding: 22px;
+  font-size: 26px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(255, 75, 75, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(255, 75, 75, 0.6);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeSlide 0.5s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.item:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+li {
+  font-size: 28px;
+  flex: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+  font-style: italic;
+}
+
+.trash {
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.trash:hover {
+  color: red;
+  transform: scale(1.2) rotate(10deg);
+}
